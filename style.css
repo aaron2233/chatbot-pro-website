@@ -1,104 +1,202 @@
-/* Global Styles */
+/* GLOBAL RESETS */
 * {
+  margin: 0; padding: 0;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #333;
+  line-height: 1.5;
 }
-.container {
-  width: 90%;
+
+/* NAVIGATION */
+.navbar {
+  background-color: #1d8f6e;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.nav-container {
   max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Header */
-header {
-  background: #4CAF50;
-  color: #fff;
-  padding: 10px 0;
-}
-header h1 {
-  margin: 0;
-  padding-left: 20px;
-  display: inline-block;
-}
-nav {
-  float: right;
-  padding-right: 20px;
-}
-nav ul {
-  list-style: none;
-}
-nav ul li {
-  display: inline-block;
-  margin-left: 20px;
-}
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Hero Section */
-#hero {
-  background: url('https://source.unsplash.com/1600x900/?technology,ai') no-repeat center center/cover;
-  height: 80vh;
-  color: #fff;
-  text-align: center;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-#hero .container {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 8px;
-}
-.btn {
-  display: inline-block;
-  background: #4CAF50;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  margin-top: 20px;
-  border-radius: 5px;
 }
 
-/* Sections */
-section {
-  padding: 40px 0;
+/* MENU TOGGLE (checkbox hack) */
+#menu-toggle {
+  display: none;
 }
-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.service {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Contact Form */
-#contact form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
+.menu-button {
+  display: none;
   flex-direction: column;
+  cursor: pointer;
 }
-#contact form input,
-#contact form textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
+.menu-button span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* NAV LINKS */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+nav li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
 }
 
-/* Footer */
-footer {
-  background: #333;
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('https://source.unsplash.com/1600x900/?technology,green') center/cover no-repeat;
+  height: 80vh;
+  text-align: center;
+  color: #fff;
+}
+.hero-content {
+  background: rgba(0,0,0,0.4);
+  padding: 2rem;
+  border-radius: 8px;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.btn-cta {
+  background-color: #1d8f6e;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn-cta:hover {
+  background-color: #16684f;
+}
+
+/* SERVICES SECTION */
+.services-section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.services-section h2 {
+  margin-bottom: 1rem;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.service-card {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+.service-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  background-color: #eef5f3;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.about-section .about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.btn-submit {
+  background-color: #1d8f6e;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn-submit:hover {
+  background-color: #16684f;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu-button {
+    display: flex; /* show hamburger on mobile */
+  }
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1d8f6e;
+    flex-direction: column;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  }
+  #menu-toggle:checked + .menu-button + nav ul {
+    max-height: 500px; /* show menu when checkbox is checked */
+  }
+  nav li a {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
 }
