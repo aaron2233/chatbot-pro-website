@@ -2,16 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chatbot Pro | AI Chatbots for Service Businesses</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chatbot Pro</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Chatbot Pro</h1>
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">Chatbot Pro</div>
+      <!-- Mobile Menu Toggle (checkbox hack) -->
+      <input type="checkbox" id="menu-toggle"/>
+      <label for="menu-toggle" class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <!-- Nav Links -->
       <nav>
-        <ul>
+        <ul class="nav-links">
           <li><a href="#hero">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
@@ -21,60 +30,48 @@
     </div>
   </header>
 
-  <section id="hero">
-    <div class="container">
-      <h2>Professional Chatbots for Your Service Business</h2>
-      <p>
-        Automate appointment bookings, handle inquiries, and boost customer engagement with AI-driven chat solutions.
-      </p>
-      <a href="#contact" class="btn">Get Started</a>
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h1>AI Chatbots for Your Service Business</h1>
+      <p>Automate bookings, handle inquiries, and stay connected with AI-driven chat solutions.</p>
+      <a href="#contact" class="btn-cta">Get Started</a>
     </div>
   </section>
 
-  <section id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service">
+  <!-- SERVICES -->
+  <section id="services" class="services-section">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
         <h3>Appointment Booking</h3>
-        <p>Automate scheduling and reduce no-shows with smart booking solutions.</p>
+        <p>Let your clients schedule 24/7 without lifting a finger.</p>
       </div>
-      <div class="service">
-        <h3>Customer Inquiries</h3>
-        <p>Instantly answer FAQs and service details 24/7.</p>
+      <div class="service-card">
+        <h3>Instant Inquiries</h3>
+        <p>Answer FAQs and pricing questions automatically.</p>
       </div>
-      <div class="service">
-        <h3>Marketing Automation</h3>
-        <p>Engage customers with targeted promotions, SMS, and email campaigns.</p>
+      <div class="service-card">
+        <h3>Targeted Promotions</h3>
+        <p>Boost revenue with AI-driven SMS and email campaigns.</p>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <div class="container">
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="about-content">
       <h2>About Us</h2>
       <p>
-        We specialize in building scalable, AI-driven chatbot solutions for hair & nail salons, dentists, doctors' offices, spas, and more. Our expertise in tech and digital marketing ensures your business never misses a customer.
+        We specialize in chatbots for hair & nail salons, dentists, spas, and more.
+        Our goal: help you save time and never miss a customer.
       </p>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Have questions or ready to get started? Send us a message.</p>
-      <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Chatbot Pro. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Ready to bring AI automation to your business?</p>
+    <form action="mailto:youremail@example.com" method="POST" enctype="text/plain" class="contact-form">
+      <input type="text" name="name" placeholder
