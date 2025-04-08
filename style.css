@@ -418,3 +418,20 @@ nav li a:hover {
     border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 }
+/* Global Styles… */
+
+/* Custom Dialogflow CX Chatbot Widget Styling */
+df-messenger {
+  z-index: 999;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  --df-messenger-font-color: #000;
+  --df-messenger-font-family: 'Google Sans', sans-serif;
+  --df-messenger-chat-background: #f3f6fc;
+  --df-messenger-message-user-background: #d3e3fd;
+  --df-messenger-message-bot-background: #fff;
+}
+
+/* Other styles for header, main, footer, etc. */
+
